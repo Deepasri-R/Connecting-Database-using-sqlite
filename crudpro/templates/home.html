@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #3498db;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #2980b9;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 28px;
+            margin: 12px 5px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 200px;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kamaraj College of Engineering and Technology</h1>
+        <h2>Web Application using Django Framework</h2>
+        <h3>Deepasri R</h3>
+        <h3>22UIT115</h3>
+        <button onclick="location.href='{% url "create" %}'">Create</button>
+        <button onclick="location.href='{% url "read" %}'">Read</button>
+        <button onclick="location.href='{% url "read" %}'">Update</button>
+        <button onclick="location.href='{% url "delete" %}'">Delete</button>
+    </div>
+</body>
+</html>

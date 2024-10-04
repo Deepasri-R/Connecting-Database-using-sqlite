@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #2c3e50;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1abc9c;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #16a085;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+
+        form {
+            width: 100%;
+            text-align: left;
+        }
+
+        label {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kamaraj College of Engineering and Technology</h1>
+        <h2>Web Application using Django Framework</h2>
+        <h3>Deepasri R</h3>
+        <h3>22UIT115</h3>
+        <h1>Create Record</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price"><br>
+            <label for="quantity">Quantity:</label>
+            <input type="text" id="quantity" name="quantity"><br>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br>
+            <input type="submit" value="Insert">
+        </form>
+    </div>
+</body>
+</html>
